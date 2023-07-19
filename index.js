@@ -80,7 +80,7 @@ function _waitForTransaction(tx) {
 		provider
 			.getTransaction(tx)
 			.then((txnData) => {
-				if (txnData && (txnData["data"].includes("0x60806040") || txnData["data"].includes("0x60c06040") || txnData["data"].includes("0x60e06040"))) {
+				if (txnData && (txnData["data"].includes("0x60"))) {
 					web3.eth
 						.getTransactionReceipt(txnData["hash"])
 						.then((txn) => {
