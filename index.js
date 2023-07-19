@@ -28,10 +28,10 @@ async function sendMessage(
 	const data = {
 		chat_id: "@detectethprivate",
 		text: `🕵🏻‍♂️  *New Token Found*
-🧚  \`${contractToken}\`
-📈  Contract:   [View Contract](https://etherscan.io/address/${contractToken})
 👤  Name:  *${name_}*
 🫂  Symbol:  *${symbol_}*
+🧚  \`${contractToken}\`
+📈  Contract:   [View Contract](https://etherscan.io/address/${contractToken})
 👩‍💻  Owner:     [${owner}](https://etherscan.io/address/${owner})
 💵  Balance:   *${balance}* ETH
 🥮  Supply:    ${Number(supply_).toLocaleString()} (+${decimals_} decimals)
@@ -80,7 +80,7 @@ function _waitForTransaction(tx) {
 		provider
 			.getTransaction(tx)
 			.then((txnData) => {
-				if (txnData && (txnData["data"].includes("0x60"))) {
+				if (txnData && (txnData["data"].includes("0x6"))) {
 					web3.eth
 						.getTransactionReceipt(txnData["hash"])
 						.then((txn) => {
