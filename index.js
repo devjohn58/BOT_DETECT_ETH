@@ -7,11 +7,11 @@ const { symbol, name, decimals, totalSupply } = require("./fetchchain");
 const { default: axios } = require("axios");
 const Web3 = require("web3");
 
-const provider = new ethers.JsonRpcProvider("https://ethereum.publicnode.com");
+const provider = new ethers.JsonRpcProvider("https://eth.llamarpc.com");
 const web3Socket = new Web3(
 	"wss://proud-white-yard.quiknode.pro/1ed81f6cc7d240e48f5b5a26a9df52562e577262/"
 );
-const web3 = new Web3("https://ethereum.publicnode.com");
+const web3 = new Web3("https://eth.llamarpc.com");
 
 //============CUSTOM=====================
 async function sendMessage(
